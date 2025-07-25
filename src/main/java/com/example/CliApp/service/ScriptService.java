@@ -5,6 +5,7 @@ import com.example.CliApp.repository.ScriptRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -32,7 +33,10 @@ public class ScriptService {
         return scriptRepository.findByName(name);
     }
 
-    
+    //get all scripts
+    public List<Script> getAllScripts(){
+        return scriptRepository.findAll();
+    }
 
 
 }
