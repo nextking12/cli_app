@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.CliApp.repository.ScriptRepository;
-
 @Service
 public class ScriptService {
 
@@ -35,8 +33,6 @@ public class ScriptService {
         return scriptRepository.findByName(name);
     }
 
-    
-
     // get all scripts
     public List<Script> getAllScripts() {
         return scriptRepository.findAll();
@@ -62,7 +58,7 @@ public class ScriptService {
         }
     }
 
-     // Delete a script by Name
+    // Delete a script by Name
     public void deleteScriptByName(String name) {
         Script script = scriptRepository.findByName(name)
                 .orElseThrow(() -> new RuntimeException("Script not found with name " + name));
