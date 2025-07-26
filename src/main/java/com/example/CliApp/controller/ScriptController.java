@@ -32,6 +32,7 @@ public class ScriptController {
 
     //POST /api/scripts 
     // creates new script
+    @PostMapping
      public ResponseEntity<Script> createScript(@RequestBody Script script) {
         Script createdScript = scriptService.createScript(script);
         return new ResponseEntity<>(createdScript, HttpStatus.CREATED);
