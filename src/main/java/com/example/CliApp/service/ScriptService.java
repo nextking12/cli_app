@@ -35,6 +35,8 @@ public class ScriptService {
         return scriptRepository.findByName(name);
     }
 
+    
+
     // get all scripts
     public List<Script> getAllScripts() {
         return scriptRepository.findAll();
